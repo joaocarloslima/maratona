@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body{
+    background-color: #B7C9CC;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+header{
+    background-color: black;
+    height: 150px;
+}
+
+.box{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+}
+
+aside{
+    width: 200px;
+    height: 200px;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+ }
+
+main li{
+    padding: 10px;
+    list-style: none;
+}
+
+main li.box{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.problem-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+}
+
+button{
+    font-size: large;
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+button:hover{
+    border-bottom: solid #666 3px;
+}
+
+button.primary {
+    background-color: #1BA94C;
+    color: white;
+}
+
+button.desabled{
+    background-color: white;
+    color: #1ba94c;
+    border: solid #1ba94c 2px;
+}
+
+i.ballon-red{
+    background: url(../img/balloon_red.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    border: 0;
+
+}
+
+
+
