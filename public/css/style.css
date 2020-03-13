@@ -10,35 +10,59 @@ body{
 
 header{
     background-color: black;
-    height: 150px;
+    color: white;
+    padding: 20px;
 }
 
 .box{
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 20px;
+    margin: 10px;
 }
 
 aside{
-    width: 200px;
-    height: 200px;
+    padding: 5px;
+    width: 300px;
+
+}
+
+.ranking-team{
+    padding: 0;
+}
+
+.ranking li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ranking-team h3{
+    font-size: medium;
+    margin: 0;
+}
+
+.ranking-team span{
+    font-size:small;
+    font-weight: lighter;
+}
+
+.ranking-ballons{
+    display: flex;
 }
 
 main {
-    width: 100%;
-    max-width: 1200px;
+    width: 800px;
  }
 
 main li{
-    padding: 10px;
+    padding: 20px;
     list-style: none;
 }
 
 main li.box{
     display: flex;
     justify-content: space-between;
-
 }
 
 .problem-action{
@@ -75,12 +99,35 @@ button.desabled{
     border: solid #1ba94c 2px;
 }
 
+i.ballon{
+    align-self: flex-end;
+    width: 48px;
+    height: 48px;
+    border: 0;
+}
+
 i.ballon-red{
     background: url(../img/balloon_red.png) no-repeat;
-    width: 24px;
-    height: 24px;
-    border: 0;
+}
 
+i.ballon-blue{
+    background: url(../img/balloon_blue.png) no-repeat;
+}
+
+i.ballon-purple{
+    background: url(../img/balloon_purple.png) no-repeat;
+}
+
+i.ballon-yellow{
+    background: url(../img/balloon_yellow.png) no-repeat;
+}
+
+i.ballon-green{
+    background: url(../img/balloon_green.png) no-repeat;
+}
+
+i.off{
+    filter: opacity(30%);
 }
 
 
