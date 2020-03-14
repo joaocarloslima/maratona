@@ -23,3 +23,4 @@ Route::get('/problems/{id}', 'ProblemsController@show');
 Route::get('admin/users', 'UsersController@index');
 Route::get('admin/users/new', 'UsersController@create')->name('user-create');
 Route::post('admin/users/new', 'UsersController@store');
+Route::delete('admin/users/{id}', 'UsersController@destroy');

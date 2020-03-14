@@ -80,6 +80,7 @@ main li.box{
 }
 
 button, a.button{
+    background-color: #bbb;
     font-size: large;
     font-weight: bold;
     border: 0;
@@ -213,6 +214,29 @@ input[type="text"], input[type="password"], input[type="mail"]{
 
 input:focus{
     border-color: #1BA94C;
+}
+
+.alert{
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.alert.success{
+    background-color: #1de9b6;
+}
+
+.alert.danger{
+    background-color: #ff8a80;
+}
+
+.alert.danger li{
+    padding: 0;
+}
+
+.inline-form{
+    display: inline;
 }
 
 
