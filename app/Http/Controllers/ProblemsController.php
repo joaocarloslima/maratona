@@ -10,4 +10,9 @@ class ProblemsController extends Controller
     {
         return view('user.problems');
     }
+
+    public function show()
+    {
+        return view('user.resolve');
+    }
 }

@@ -53,7 +53,11 @@ aside{
 
 main {
     width: 800px;
- }
+}
+
+main h1{
+    margin: 13px;
+}
 
 main li{
     padding: 20px;
@@ -75,21 +79,28 @@ main li.box{
     display: flex;
 }
 
-button{
+button, a.button{
     font-size: large;
     font-weight: bold;
     border: 0;
     border-radius: 4px;
     padding: 15px 30px;
     cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
 }
 
-button:hover{
-    border-bottom: solid #666 3px;
-}
-
-button.primary {
+button.primary, a.primary{
     background-color: #1BA94C;
+    color: white;
+}
+
+button.small{
+    padding: 8px;
+}
+
+button.danger{
+    background-color: #e53935;
     color: white;
 }
 
@@ -97,38 +108,111 @@ button.desabled{
     background-color: white;
     color: #1ba94c;
     border: solid #1ba94c 2px;
+    cursor: not-allowed;
 }
 
-i.ballon{
+i.balloon{
     align-self: flex-end;
-    width: 48px;
-    height: 48px;
-    border: 0;
+    font-size: 20pt;
 }
 
-i.ballon-red{
-    background: url(../img/balloon_red.png) no-repeat;
-}
-
-i.ballon-blue{
-    background: url(../img/balloon_blue.png) no-repeat;
-}
-
-i.ballon-purple{
-    background: url(../img/balloon_purple.png) no-repeat;
-}
-
-i.ballon-yellow{
-    background: url(../img/balloon_yellow.png) no-repeat;
-}
-
-i.ballon-green{
-    background: url(../img/balloon_green.png) no-repeat;
-}
+.blue{ color: #00b0ff;}
+.purple { color: #8e24aa}
+.red { color: #e53935}
+.green { color: #00e676}
+.yellow { color: #ffea00}
 
 i.off{
     filter: opacity(30%);
 }
 
+
+/* table */
+table{
+    margin: 10px auto;
+    border-collapse: collapse; 
+}
+
+.table-action{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+
+table thead{
+    background-color: #666;
+    color: white;
+}
+
+table th{
+    padding: 10px;
+}
+
+th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+th:last-child{
+    border-radius: 0 5px 0 0;
+}
+
+tbody tr:hover{
+    background-color: #B7C9CC;
+}
+
+td{
+    border-bottom: solid 1px #666;
+    padding: 0 15px ;
+}
+
+/* menu */
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu li{
+    display: flex;
+    margin-left: -30px;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu li i{
+    padding-right: 10px;
+}
+
+.menu li:hover{
+    background-color: #B7C9CC;
+}
+
+.menu li.active{
+    border-left: solid 5px #1BA94C;
+    
+}
+
+form{
+    width: 80%;
+    margin: auto;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="mail"]{
+    font-size: large;
+    padding: 5px;
+    outline: 0;
+    border-width: 0 0 2px;
+}
+
+input:focus{
+    border-color: #1BA94C;
+}
 
 
