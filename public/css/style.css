@@ -239,4 +239,9 @@ input:focus{
     display: inline;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 

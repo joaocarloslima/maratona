@@ -21,6 +21,12 @@ class UsersController extends Controller
     }
 
     public function store(FormUserRequest $request){
+        $users = User::all();
+        foreach ($users as $user) {
+            if ($user->email == $request->email) {
+                return view('admin.users.create', ['tem' => true]);
+            } 
+        }
         $user = User::create( $request->all());
         $request->session()->flash("message", "Usuário $user->name criado com id $user->id");
         return redirect("/admin/users");

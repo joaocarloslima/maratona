@@ -1,12 +1,12 @@
 <ul class="menu">
-    <li @if ($active==="users") class='active' @endif>
+    <a href="/admin/users/"><li @if ($active==="users") class='active' @endif>
         <i class="material-icons">person</i>
         Usuários
-    </li>
-    <li @if ($active==="teams") class='active' @endif>
+    </li></a>
+    <a href="/admin/teams/0"><li @if ($active==="teams") class='active' @endif>
         <i class="material-icons">people_alt</i>
         Equipes
-    </li>
+    </li></a>
     <li @if ($active==="problems") class='active' @endif>
         <i class="material-icons">code</i>
         Problemas

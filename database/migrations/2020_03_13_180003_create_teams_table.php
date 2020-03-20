@@ -10,11 +10,10 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();;
             $table->unsignedBigInteger('event_id');
             $table->timestamps();
-
-            $table->foreign('event_id')->references('id')->on('events');
+            //$table->foreign('event_id')->references('id')->on('events');
 
         });
     }
