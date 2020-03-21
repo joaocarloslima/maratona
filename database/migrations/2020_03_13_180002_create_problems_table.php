@@ -10,6 +10,9 @@ class CreateProblemsTable extends Migration
     {
         Schema::create('problems', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->set('color', ['red', 'green', 'blue', 'yellow', 'purple']);
             $table->text('text');
             $table->unsignedBigInteger('event_id');
             $table->timestamps();

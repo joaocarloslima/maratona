@@ -19,6 +19,7 @@ header{
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px;
+    padding-bottom: 10px;
 }
 
 aside{
@@ -77,6 +78,8 @@ main li.box{
 
 .container{
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 button, a.button{
@@ -89,6 +92,7 @@ button, a.button{
     cursor: pointer;
     text-decoration: none;
     margin: 5px;
+    color: #000;
 }
 
 button.primary, a.primary{
@@ -185,13 +189,21 @@ td{
     padding-right: 10px;
 }
 
+.menu a{
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a:visited{
+    color: #000;
+}
+
 .menu li:hover{
     background-color: #B7C9CC;
 }
 
 .menu li.active{
     border-left: solid 5px #1BA94C;
-    
 }
 
 form{
@@ -210,6 +222,14 @@ input[type="text"], input[type="password"], input[type="mail"]{
     padding: 5px;
     outline: 0;
     border-width: 0 0 2px;
+}
+
+select{
+    font-size: large;
+    padding: 5px;
+    outline: 0;
+    border-width: 0 0 2px;
+    background-color: #fff;
 }
 
 input:focus{
