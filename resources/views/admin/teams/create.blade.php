@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Criar usuário')
+@section('title', 'Criar Equipe')
 
 @section('menu')
     @component('menu', ['active' => 'teams'])
@@ -32,14 +32,14 @@
             <input type="text" name="name" id="name">
         </div>
         <div class="select-group">
-            <label for="name">Competição</label>
+            <label for="event_id">Competição</label>
             <select name="event_id" id="event_id">
-                <option value=0 selected>Etecia</option>
-                <option value=1>Etec Guaracy Silveira</option>
-                <option value=2>ETESP</option>
+                <option value=1 selected>Etecia</option>
+                <option value=2>Etec Guaracy Silveira</option>
+                <option value=3>ETESP</option>
             </select>
         </div>
-        <a class="button" href="/admin/users/teams">cancelar</a>
+        <a class="button" href="/admin/teams">cancelar</a>
         <button type="submit" class="primary">Criar</button>
     </form>
 </main>

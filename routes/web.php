@@ -24,8 +24,11 @@ Route::get('admin/users', 'UsersController@index');
 Route::get('admin/users/new', 'UsersController@create')->name('user-create');
 Route::post('admin/users/new', 'UsersController@store');
 Route::delete('admin/users/{id}', 'UsersController@destroy');
-Route::delete('admin/teams/{event_id}/{id}', 'teamsController@destroy');
-Route::get('admin/teams/new', 'teamsController@create')->name('team-create');
-Route::post('admin/teams/new', 'teamsController@store');
-Route::get('admin/teams/{event_id}', 'teamsController@index');
+
+Route::get('admin/teams', 'TeamsController@index');
+Route::delete('admin/teams/{id}', 'TeamsController@destroy');
+Route::get('admin/teams/new', 'TeamsController@create')->name('team-create');
+Route::post('admin/teams/new', 'TeamsController@store');
+
+Route::get('admin/events/{id}/teams', 'TeamsController@index');
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Criar equipe')
+@section('title', 'Lista de equipes')
 
 @section('menu')
     @component('menu', ['active' => 'teams'])
@@ -25,13 +25,12 @@
         </thead>
         <tbody>
             @foreach ($teams as $team)
-            @if ($team->event_id == $dEvent_id)
             <tr>
                 <td>{{$team->name}}</td>
                 <td>oi</td>
                 <td></td>
                 <td>
-                    <form method="POST" action="/admin/teams/{{$dEvent_id}}/{{ $team->id }}" class="inline-form">
+                    <form method="POST" action="/admin/teams/{{ $team->id }}" class="inline-form">
                         @csrf
                         @method('DELETE')
                         <button class="small danger"><i class="material-icons">delete</i></button>
@@ -39,7 +38,6 @@
                     <button class="small"><i class="material-icons">add</i></button>
                 </td>
             </tr>
-            @endif
             @endforeach
         </tbody>
     </table>
