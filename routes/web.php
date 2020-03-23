@@ -25,6 +25,11 @@ Route::get('admin/users/new', 'UsersController@create')->name('user-create');
 Route::post('admin/users/new', 'UsersController@store');
 Route::delete('admin/users/{id}', 'UsersController@destroy');
 
+Route::get('admin/teams', 'TeamsController@index');
+Route::delete('admin/teams/{id}', 'TeamsController@destroy');
+Route::get('admin/teams/new', 'TeamsController@create')->name('team-create');
+Route::post('admin/teams/new', 'TeamsController@store');
+
 Route::get('admin/problems', 'ProblemsController@index')->name('problems-index');
 Route::get('admin/problems/new', 'ProblemsController@create')->name('problems-create');
 Route::post('admin/problems/new', 'ProblemsController@store');

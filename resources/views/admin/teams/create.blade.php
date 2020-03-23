@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Criar usuário')
+@section('title', 'Criar Equipe')
 
 @section('menu')
-    @component('menu', ['active' => 'users'])
+    @component('menu', ['active' => 'teams'])
         
     @endcomponent
 @endsection
 
 @section('main')
 <main class="box">
-    <h1>Criar usuário</h1>
+    <h1>Criar equipe</h1>
     @if (isset($tem))
         <div class="alert danger">
-        <ul>Email ja cadastrado!</ul>
+        <ul>Equipe ja existente!</ul>
         </div>
     @endif
     @if ($errors->any())
@@ -28,18 +28,18 @@
     <form method="POST">
         @csrf
         <div class="input-group">
-            <label for="name">Nome completo</label>
+            <label for="name">Nome da Equipe</label>
             <input type="text" name="name" id="name">
         </div>
-        <div class="input-group">
-            <label for="email">E-mail</label>
-            <input type="mail" name="email" id="email">
+        <div class="select-group">
+            <label for="event_id">Competição</label>
+            <select name="event_id" id="event_id">
+                <option value=1 selected>Etecia</option>
+                <option value=2>Etec Guaracy Silveira</option>
+                <option value=3>ETESP</option>
+            </select>
         </div>
-        <div class="input-group">
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="pelo menos 8 digitos">
-        </div>
-        <a class="button" href="/admin/users">cancelar</a>
+        <a class="button" href="/admin/teams">cancelar</a>
         <button type="submit" class="primary">Criar</button>
     </form>
 </main>
