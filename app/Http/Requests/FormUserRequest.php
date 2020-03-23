@@ -15,7 +15,7 @@ class FormUserRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'email' => 'required',
+            'email' => 'required|email:rfc,dns|unique:users,email',
             'password' => 'required|min:8'
         ];
     }
@@ -24,7 +24,9 @@ class FormUserRequest extends FormRequest
     {
         return [
             'required' => 'O campo :attribute é obrigatório',
-            'min' => 'O campo :attribute precisa ter pelo menos :min caracteres'
+            'min' => 'O campo :attribute precisa ter pelo menos :min caracteres',
+            'email' => 'O email deve ser um endereço de e-mail válido',
+            'email.unique' => 'Esse e-mail já foi cadastrado'
         ];
     }
 }
