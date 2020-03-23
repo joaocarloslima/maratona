@@ -20,7 +20,7 @@ class teamsController extends Controller
         return view('admin.teams.create');
     }
 
-    public function store(Request $request){
+    public function store(FormTeamRequest $request){
         $team = Team::create( $request->all());
         $request->session()->flash("message", "Equipe $team->name criado com id $team->id");
         return redirect("/admin/teams");

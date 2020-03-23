@@ -5,7 +5,7 @@
             Usuários
         </li>
     </a>
-    <a href="{{ route('user-index') }}">
+    <a href="{{ route('teams-index') }}">
         <li @if ($active==="teams") class='active' @endif>
             <i class="material-icons">people_alt</i>
             Equipes
@@ -15,6 +15,12 @@
         <li @if ($active==="problems") class='active' @endif>
             <i class="material-icons">code</i>
             Problemas
+        </li>
+    </a>
+    <a href="{{ route('events-index') }}">
+        <li @if ($active==="events") class='active' @endif>
+            <i class="material-icons">directions_run</i>
+            Eventos
         </li>
     </a>
     <a href="{{ route('user-index') }}">

@@ -217,7 +217,7 @@ form{
     padding: 10px;
 }
 
-input[type="text"], input[type="password"], input[type="mail"]{
+input[type="text"], input[type="password"], input[type="mail"], input[type="date"]{
     font-size: large;
     padding: 5px;
     outline: 0;

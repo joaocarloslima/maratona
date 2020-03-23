@@ -25,4 +25,10 @@ class ProblemsController extends Controller
         return redirect("/admin/problems");
     }
 
+    public function destroy(Request $request){
+        Problem::destroy($request->id);
+        $request->session()->flash("message", "Problema apagado com sucesso");
+        return redirect("/admin/problems");
+    }
+
 }
