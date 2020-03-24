@@ -25,6 +25,7 @@
                 <th>id</th>
                 <th>nome</th>
                 <th>login</th>
+                <th>equipe</th>
                 <th>ações</th>
             </tr>
         </thead>
@@ -35,13 +36,18 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
-                <td>
+                <td>{{ $user->team->name }}</td>
+                <td class="action">
+                    <a href="{{ route('reset-pass', $user->id) }}" class="button small" title="editar"><i class="material-icons">edit</i></a>
+                    <form method="POST" action="/admin/users/{{ $user->id }}" class="inline-form">
+                        @csrf
+                        <button class="small" title="resetar para senha padrão"><i class="material-icons">vpn_key</i></button>
+                    </form>
                     <form method="POST" action="/admin/users/{{ $user->id }}" class="inline-form">
                         @csrf
                         @method('DELETE')
-                        <button class="small danger"><i class="material-icons">delete</i></button>
+                        <button class="small danger" title="excluir"><i class="material-icons">delete</i></button>
                     </form>
-                    <button class="small"><i class="material-icons">people_alt</i></button>
                 </td>
             </tr>    
             
@@ -49,6 +55,7 @@
 
         </tbody>
     </table>
+    {{ $users->links() }}
 
 </div>
 @endsection

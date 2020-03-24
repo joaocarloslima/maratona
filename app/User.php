@@ -8,6 +8,9 @@ class User extends Model
 {
     protected $fillable = ['name', 'email', 'password', 'team_id'];
     protected $hidden = ['password'];
-    protected $attributes = ['team_id' => 0];
+    
+    public function team(){
+        return $this->belongsTo('App\Team');
+    }
 
 }

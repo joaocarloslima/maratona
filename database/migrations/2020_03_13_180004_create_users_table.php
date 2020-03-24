@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('team_id');
             $table->timestamps();
 
-            //$table->foreign('team_id')->references('id')->on('teams');
+            $table->foreign('team_id')->references('id')->on('teams');
 
         });
 

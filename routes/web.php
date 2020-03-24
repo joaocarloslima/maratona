@@ -24,6 +24,9 @@ Route::get('admin/users', 'UsersController@index')->name('user-index');
 Route::get('admin/users/new', 'UsersController@create')->name('user-create');
 Route::post('admin/users/new', 'UsersController@store');
 Route::delete('admin/users/{id}', 'UsersController@destroy');
+Route::get('admin/users/{id}', 'UsersController@edit')->name('user-edit');
+Route::put('admin/users/{id}', 'UsersController@update')->name('user-update');
+Route::post('admin/users/{id}', 'UsersController@resetPass')->name('reset-pass');
 
 Route::get('admin/teams', 'TeamsController@index')->name('teams-index');
 Route::delete('admin/teams/{id}', 'TeamsController@destroy');
