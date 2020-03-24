@@ -11,11 +11,11 @@
                     <span>25 minutos</span>
                 </div>
                 <div class="ranking-ballons">
-                    <i class="material-icons balloon blue">nature</i>
-                    <i class="material-icons balloon red">nature</i>
-                    <i class="material-icons balloon yellow">nature</i>
-                    <i class="material-icons balloon green">nature</i>
-                    <i class="material-icons balloon purple">nature</i>
+                    <i class="material-icons balloon blue">room</i>
+                    <i class="material-icons balloon red">room</i>
+                    <i class="material-icons balloon yellow">room</i>
+                    <i class="material-icons balloon green">room</i>
+                    <i class="material-icons balloon purple">room</i>
                 </div>
             </li>
             <li>
@@ -25,8 +25,8 @@
                     <span>32 minutos</span>
                 </div>
                 <div class="ranking-ballons">
-                    <i class="material-icons balloon purple">nature</i>
-                    <i class="material-icons balloon red">nature</i>
+                    <i class="material-icons balloon purple">room</i>
+                    <i class="material-icons balloon red">room</i>
                 </div>
             </li>
         </ul>
@@ -41,7 +41,7 @@
                         <span>resolvido</span>
                     </div>
                     <div class="problem-action">
-                        <i class="material-icons balloon blue">nature</i>
+                        <i class="material-icons balloon blue">where_to_vote</i>
                         <button class="desabled">resolvido</button>
                     </div>
                 </li>
@@ -52,7 +52,7 @@
                         <span>resolvido</span>
                     </div>
                     <div class="problem-action">
-                        <i class="material-icons balloon red off">nature</i>
+                        <i class="material-icons balloon red off">room</i>
                         <button class="primary">resolver</button>
                     </div>
                 </li>

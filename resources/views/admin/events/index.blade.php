@@ -32,8 +32,8 @@
             <tr>
                 <td>{{$event->id}}</td>
                 <td>{{$event->name}}</td>
-                <td>{{$event->start_date}}</td>
-                <td>{{$event->end_date}}</td>
+                <td>{{$event->start_date->format('d/m/Y')}}</td>
+                <td>{{$event->end_date->format('d/m/Y')}}</td>
                 <td>
                     <form method="POST" action="/admin/events/{{ $event->id }}" class="inline-form">
                         @csrf

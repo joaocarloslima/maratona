@@ -100,9 +100,10 @@ button.primary, a.primary{
     color: white;
 }
 
-button.small{
+button.small, a.small{
     padding: 8px;
 }
+
 
 button.danger{
     background-color: #e53935;
@@ -169,6 +170,12 @@ td{
     border-bottom: solid 1px #666;
     padding: 0 15px ;
 }
+
+td.action{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 
 /* menu */
 .menu{

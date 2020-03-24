@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/problems', 'ProblemsController@index');
+Route::get('/problems', 'ProblemsController@list');
 Route::get('/problems/{id}', 'ProblemsController@show');
 
 Route::get('admin/users', 'UsersController@index')->name('user-index');
@@ -34,6 +34,8 @@ Route::get('admin/problems', 'ProblemsController@index')->name('problems-index')
 Route::get('admin/problems/new', 'ProblemsController@create')->name('problems-create');
 Route::post('admin/problems/new', 'ProblemsController@store');
 Route::delete('admin/problems/{id}', 'ProblemsController@destroy');
+Route::get('admin/problems/{id}/edit', 'ProblemsController@edit')->name('problem-edit');
+Route::put('admin/problems/{id}', 'ProblemsController@update')->name('problem-update');;
 
 Route::get('admin/events', 'EventsController@index')->name('events-index');
 Route::get('admin/events/new', 'EventsController@create')->name('event-create');
