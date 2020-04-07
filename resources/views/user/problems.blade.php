@@ -42,14 +42,11 @@
                     </div>
                     <div class="problem-action">
                         @if ($resolvido)
-                            <i class="material-icons ballon blue">where_to_vote</i>
+                            <i class="material-icons ballon {{$problem->color}}">where_to_vote</i>
                             <button class="desabled">Resolvido</button>
                         @else
-                            <i class="material-icons balloon red off">room</i>
-                            @php 
-                                $p = $problem->id;
-                                echo "<a href='/problems/$p'><button class='primary'>resolver</button></a>";
-                            @endphp
+                            <i class="material-icons balloon {{$problem->color}} off">room</i>
+                            <a href='/problems/{{$problem->id}}'><button class='primary'>resolver</button></a>
                         @endif
                 <li>
             @endforeach

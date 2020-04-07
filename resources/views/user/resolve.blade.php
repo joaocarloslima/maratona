@@ -1,62 +1,68 @@
 @extends('layouts.app')
 
-@section('title', 'Resolver Problema')
+@section('title', "Resolver Problema")
 
-
-@section('content')
-
-        <main>
-            <ul>
-                <li class="box">
-                    <div class="problem-info">
-                        <h1>Problema 01</h1>
-                        <p>Descrição do problema 01</p>
-                        <span>resolvido</span>
-                    </div>
-                    <div class="problem-action">
-                        <i class="ballon ballon-blue "></i>
-                        <button class="desabled">resolvido</button>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="problem-info">
-                        <h1>Problema 01</h1>
-                        <p>Descrição do problema 01</p>
-                        <span>resolvido</span>
-                    </div>
-                    <div class="problem-action">
-                        <i class="ballon ballon-red off"></i>
-                        <button class="primary">resolver</button>
-                    </div>
-                </li>
-            </ul>
-        </main>
-
-        <aside class="box">
-            <h2>Ranking</h2>
-            <ul class="ranking">
-            <li>
-                    <div class="ranking-team">
-                        <h3>Equipe Alpha</h3>
-                        <span>25 minutos</span>
-                    </div>
-                    <div class="ranking-ballons">
-                        <i class="ballon ballon-blue "></i>
-                        <i class="ballon ballon-red "></i>
-                        <i class="ballon ballon-purple "></i>
-                    </div>
-                </li>
-                <li>
-                    <div class="ranking-team">
-                        <img src="" alt="" class="team-foto">
-                        <h3>Equipe Beta</h3>
-                        <span>32 minutos</span>
-                    </div>
-                    <div class="ranking-ballons">
-                        <i class="ballon ballon-green"></i>
-                        <i class="ballon ballon-yellow"></i>
-                    </div>
-                </li>
-            </ul>
-        </aside>
+@section('menu')
+        <h2>Envios Realizados</h2>
+        <ul class="runs">
+            <li class="runs-item">
+                <i class="material-icons red">report</i>
+                <div class="runs-data">
+                    <span>+10 minutos</span>
+                    <h3>Erro de saída</h3>
+                </div>
+            </li>
+            <li class="runs-item">
+                <i class="material-icons red">bug_report</i>
+                <div class="runs-data">
+                    <span>+10 minutos</span>
+                    <h3>Erro em tempo de execução</h3>
+                </div>
+            </li>
+            <li class="runs-item">
+                <i class="material-icons red">watch_later</i>
+                <div class="runs-data">
+                    <span>+10 minutos</span>
+                    <h3>Erro de Timeout</h3>
+                </div>
+            </li>
+            <li class="runs-item">
+                <i class="material-icons red">build</i>
+                <div class="runs-data">
+                    <span>+10 minutos</span>
+                    <h3>Erro de compilação</h3>
+                </div>
+            </li>
+            <li class="runs-item">
+                <i class="material-icons green">check_circle</i>
+                <div class="runs-data">
+                    <span>sucesso</span>
+                    <h3>Resposta correta</h3>
+                </div>
+            </li>
+        </ul>
 @endsection
+
+@section('main')
+    <div class="box">
+        <div class="problem-detail">
+            <i class="material-icons balloon {{$problem->color}}">room</i>
+            <h1>{{$problem->name}}</h1>
+            @php echo $problem->text; @endphp
+            <form method="post" enctype="multipart/form-data">
+                <div>
+                    <input type="file" id="file" name="file" multiple>
+                </div>
+                <div>
+                    <a class="button" href="/problems">cancelar</a>
+                    <button class="primary">enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+@endsection
+
+
+

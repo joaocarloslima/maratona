@@ -38,18 +38,34 @@ aside{
     justify-content: space-between;
 }
 
-.ranking-team h3{
+.ranking-team h3, .runs-item h3{
     font-size: medium;
     margin: 0;
 }
 
-.ranking-team span{
+.ranking-team span, .runs-item span{
     font-size:small;
     font-weight: lighter;
 }
 
 .ranking-ballons{
     display: flex;
+}
+
+.runs-item{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.runs-item i{
+    align-self: center;
+}
+
+.runs-data{
+    margin-left: 10px;
+    padding: 0;
+    align-self: flex-start;
 }
 
 main {
@@ -74,6 +90,10 @@ main li.box{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.problem-detail{
+    padding: 20px 30px;
 }
 
 .container{
@@ -127,6 +147,8 @@ i.balloon{
 .red { color: #e53935}
 .green { color: #00e676}
 .yellow { color: #ffea00}
+.pink { color: #ad1457}
+.pink-light { color: #ff4081}
 
 i.off{
     filter: opacity(30%);

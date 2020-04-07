@@ -52,8 +52,8 @@ class ProblemsController extends Controller
     }
 
     public function show(Request $request){
-        $problems = Problem::find($request->id);
-        return view('problem.problem', ['problems' => $problems]);
+        $problem = Problem::find($request->id);
+        return view('user.resolve', ['problem' => $problem]);
     }
 
 
