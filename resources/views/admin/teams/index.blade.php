@@ -20,6 +20,7 @@
                 <th>Equipe</th>
                 <th>participantes</th>
                 <th>pontuação</th>
+                <th>evento</th>
                 <th>ações</th>
             </tr>
         </thead>
@@ -29,6 +30,7 @@
                 <td>{{$team->name}}</td>
                 <td>oi</td>
                 <td></td>
+                <td>{{ $team->event->name }}</td>
                 <td>
                     <form method="POST" action="/admin/teams/{{ $team->id }}" class="inline-form">
                         @csrf

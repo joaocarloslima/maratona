@@ -31,8 +31,16 @@
             <input type="date" name="start_date" id="start_date">
         </div>
         <div class="input-group">
+            <label for="start_time">Horário de Início</label>
+            <input type="time" name="start_time" id="start_time">
+        </div>
+        <div class="input-group">
             <label for="end_date">Data de Fim</label>
             <input type="date" name="end_date" id="end_date">
+        </div>
+        <div class="input-group">
+            <label for="end_time">Horário de Fim</label>
+            <input type="time" name="end_time" id="end_time">
         </div>
         <a class="button" href="/admin/events">cancelar</a>
         <button type="submit" class="primary">Criar</button>

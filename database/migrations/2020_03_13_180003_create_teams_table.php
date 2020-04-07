@@ -13,7 +13,7 @@ class CreateTeamsTable extends Migration
             $table->string('name')->unique();;
             $table->unsignedBigInteger('event_id');
             $table->timestamps();
-            //$table->foreign('event_id')->references('id')->on('events');
+            $table->foreign('event_id')->references('id')->on('events');
 
         });
     }

@@ -48,7 +48,12 @@ class ProblemsController extends Controller
     public function list()
     {
         $problems = Problem::all();
-        return view('user.problems', ['problems' => $problems]);
+        return view('user.problems', ['problems' => $problems, 'resolvido' => false]);
+    }
+
+    public function show(Request $request){
+        $problems = Problem::find($request->id);
+        return view('problem.problem', ['problems' => $problems]);
     }
 
 

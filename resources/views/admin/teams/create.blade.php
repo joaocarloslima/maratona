@@ -34,9 +34,9 @@
         <div class="select-group">
             <label for="event_id">Competição</label>
             <select name="event_id" id="event_id">
-                <option value=1 selected>Etecia</option>
-                <option value=2>Etec Guaracy Silveira</option>
-                <option value=3>ETESP</option>
+                @foreach ($events as $event)
+                    <option value="{{ $event->id }}">{{ $event->name }}</option>
+                @endforeach
             </select>
         </div>
         <a class="button" href="/admin/teams">cancelar</a>

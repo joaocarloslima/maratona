@@ -34,28 +34,23 @@
 
 @section('main')
             <ul>
+            @foreach ($problems as $problem)
                 <li class="box">
                     <div class="problem-info">
-                        <h1>Problema 01</h1>
-                        <p>Descrição do problema 01</p>
-                        <span>resolvido</span>
+                        <h1>{{$problem->name}}</h1>
+                        <p>{{$problem->description}}</p>
                     </div>
                     <div class="problem-action">
-                        <i class="material-icons balloon blue">where_to_vote</i>
-                        <button class="desabled">resolvido</button>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="problem-info">
-                        <h1>Problema 01</h1>
-                        <p>Descrição do problema 01</p>
-                        <span>resolvido</span>
-                    </div>
-                    <div class="problem-action">
-                        <i class="material-icons balloon red off">room</i>
-                        <button class="primary">resolver</button>
-                    </div>
-                </li>
-            </ul>
-
+                        @if ($resolvido)
+                            <i class="material-icons ballon blue">where_to_vote</i>
+                            <button class="desabled">Resolvido</button>
+                        @else
+                            <i class="material-icons balloon red off">room</i>
+                            @php 
+                                $p = $problem->id;
+                                echo "<a href='/problems/$p'><button class='primary'>resolver</button></a>";
+                            @endphp
+                        @endif
+                <li>
+            @endforeach
 @endsection

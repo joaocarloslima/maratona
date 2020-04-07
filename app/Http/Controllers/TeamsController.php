@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FormTeamRequest;
 use App\Team;
+use App\Event;
 use Illuminate\Http\Request;
 
 class teamsController extends Controller
@@ -17,7 +18,7 @@ class teamsController extends Controller
     }
 
     public function create(){
-        return view('admin.teams.create');
+        return view('admin.teams.create', ['events' => Event::all()]);
     }
 
     public function store(FormTeamRequest $request){
